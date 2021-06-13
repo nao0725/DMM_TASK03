@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  devise_scope :user do
-    root :to => "devise/sessions#new"
-  end
+  root to: 'homes#top'
   devise_for :users
-  resources :post_images, only: [:new, :create, :index, :show, :destroy]
+  resources :books, only: [:new, :create, :index, :show, :destroy,:users,:edit]
   resources :users, only: [:show,:edit]
 end
