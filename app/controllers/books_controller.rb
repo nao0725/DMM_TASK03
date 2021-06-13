@@ -1,4 +1,4 @@
-class BooksController < ApplicationController  
+class BooksController < ApplicationController
   def create
   end
 
@@ -10,5 +10,5 @@ class BooksController < ApplicationController
 
   def destroy
   end
-  
+
 end
