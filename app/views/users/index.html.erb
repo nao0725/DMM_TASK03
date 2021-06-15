@@ -1,2 +1,29 @@
-<h2>Uers</h2>
-<p>他の人のユーザー一覧がここに来る</p>
+<main>
+<p id="notice"></p>
+  <div class="container px-5 px-sm-0">
+    <div class="row">
+    <%= render 'books/list',locals:{ book: @book,user: @user} %>
+    <div class="col-md-8 offset-md-1">
+      <h2>Users</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+          <tbody>
+             <% @users.each do |user| %>
+            <tr>
+                <td><%= attachment_image_tag book.user, :profile_image %></td>
+                <td><%= user.name %></td>
+                <td><%= link_to "Show", user_path(user) %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
