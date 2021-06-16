@@ -7,16 +7,16 @@
   		  <tbody>
   		  <tr>
           <td><%= attachment_image_tag @user, :profile_image %></td>
-          <td><%= link_to @book.title, book_path %></td>
-          <td><%= @book.body %></td>
+          <td><%= link_to @book_detail.title, book_path %></td>
+          <td><%= @book_detail.body %></td>
           <td>
-              <% if @book.user == current_user %>
+              <% if @book_detail.user == current_user %>
                 <%= link_to "Edit", edit_book_path %>
               <% end %>
           </td>
           <td>
-              <% if @book.user == current_user %>
-                <%= link_to "Destroy", books_path(@book), method: :delete %>
+              <% if @book_detail.user == current_user %>
+                <%= link_to "Destroy", books_path(@book_detail), method: :delete %>
               <% end %>
           </td>
         </tr>
