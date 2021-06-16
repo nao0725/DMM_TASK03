@@ -4,7 +4,7 @@
 
 <main>
   <div class = "container">
-    <%= render 'books/list',locals:{ book: @book,user: @user} %>
+    <%= render partial: 'books/list',locals:{ book: @book,user: @user} %>
     <div class = "row">
       
       <div class="col-md-8 offset-md-1">
