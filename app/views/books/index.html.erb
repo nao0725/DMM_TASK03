@@ -3,6 +3,7 @@
 <script src="https://kit.fontawesome.com/f03fd448b3.js" crossorigin="anonymous"></script>
 
 <main>
+   <%= flash[:notice] %>
   <div class = "container">
     <%= render 'books/list', book: @book,user: @user %>
     <div class = "row">
