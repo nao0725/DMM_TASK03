@@ -12,7 +12,7 @@
           <td><%= @book_detail.body %></td>
           <td>
               <% if @book_detail.user == current_user %>
-                <%= link_to "Edit", edit_book_path %>
+                <%= link_to "Edit", edit_book_path(@book_detail) %>
               <% end %>
           </td>
           <td>

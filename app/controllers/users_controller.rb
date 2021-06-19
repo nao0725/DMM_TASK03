@@ -26,14 +26,14 @@ class UsersController < ApplicationController
        render :edit
     end
   end
-  
+
 
   private
 
   def user_params
-    params.permit(:profile_image, :name, :introduction)
+    params.require(:user).permit(:profile_image, :name, :introduction)
   end
-  
+
   def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless @user == current_user
