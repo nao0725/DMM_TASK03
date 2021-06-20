@@ -1,14 +1,15 @@
 <main>
-  <div class = "text-danger h2">
+ 
   <% if @user.errors.any? %>
+   <div class = "text-danger h2">
     <%= @user.errors.count %> errors prohibited this obj from being saved:
   </div>
-    <div class = "text-danger ">
+    <li class = "text-danger ">
     <% @user.errors.full_messages.each do |message| %>
       <%= message %>
     <% end %>
   <% end %>
-  </div>
+  </li>
   
   <div class="container">
     <div class="row">
