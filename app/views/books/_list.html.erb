@@ -1,17 +1,17 @@
  <script src="https://kit.fontawesome.com/f03fd448b3.js" crossorigin="anonymous"></script>
- 
+
  <h2>User info</h2>
-    <%= attachment_image_tag current_user, :profile_image, fallback: "no_image.jpg", size:'80x80' %>
+    <%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size:'80x80' %>
   <table class="table">
     <tbody>
       <tr></tr>
       <tr>
 	      <th>name</th>
-	      <th><%= user.name ,class: "form-control"%></th>
+	      <th><%= user.name %></th>
       </tr>
       <tr>
 	      <th>introduction</th>
-	      <th><%= user.introduction ,class: "form-control" %></th>
+	      <th><%= user.introduction %></th>
       </tr>
     </tbody>
   </table>
@@ -29,7 +29,7 @@
         <label for="book_opinion">Opinion</label>
         <%= f.text_area :body %>
       </div>
-
+      
         <%= f.submit 'Create Book', class:"btn btn-secondary  bg-success text-white" %>
 
     <% end %>

@@ -39,7 +39,7 @@ class BooksController < ApplicationController
     else
       @user = current_user
       @book_detail = Book.find(params[:id])
-      render :show
+      render :edit
     end
   end
 
