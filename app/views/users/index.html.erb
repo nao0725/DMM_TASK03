@@ -20,7 +20,7 @@
           <tbody>
              <% @users.each do |user| %>
             <tr>
-                <td><%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size:'50x50'%></td>
+                <td><%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", size:'40x50'%></td>
                 <td><%= user.name %></td>
                 <td><%= link_to "Show", user_path(user) %></td>
             </tr>
@@ -29,5 +29,4 @@
         </table>
     </div>
   </div>
-  <>
 </main>
