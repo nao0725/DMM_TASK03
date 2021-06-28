@@ -17,3 +17,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+var title = "bookers2へようこそ";
+alert(title);
